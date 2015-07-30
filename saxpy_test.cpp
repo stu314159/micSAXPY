@@ -36,7 +36,7 @@ int main(int argc, char * argv[]){
   
   // compute Z on the mic
   int i,offset,loopIter,k,th_id;
-//pragma offload target(mic:0) in(X[0:N],Y[0:N]) out(Z[0:N]) //<-- for offload mode only
+#pragma offload target(mic:0) in(X[0:N],Y[0:N]) out(Z[0:N]) //<-- for offload mode only
 #pragma omp parallel for private(i,offset,loopIter,k)
   for(i=0;i<num_threads;i++){
     th_id = omp_get_thread_num(); // get thread num

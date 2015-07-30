@@ -12,10 +12,10 @@ module unload libsci atp
 module swap craype-ivybridge craype-intel-knc
 module load intel
 source ${INTEL_PATH}/bin/compilervars.sh intel64
-##export OFFLOAD_REPORT=2
-##export OMP_NUM_THREADS=236
-export OMP_NUM_THREADS=236
-export KMP_AFFINITY="granularity=fine,compact"
-export KMP_PLACE_THREADS="59c,4t"
+export OFFLOAD_REPORT=2
+export MIC_ENV_PREFIX=PHI
+export PHI_OMP_NUM_THREADS=236
+export PHI_KMP_AFFINITY="granularity=fine,compact"
+export PHI_KMP_PLACE_THREADS="59c,4t"
 cd $PBS_O_WORKDIR
 aprun -cc none -k ./saxpy_test 1024 1
