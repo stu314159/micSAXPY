@@ -1,4 +1,4 @@
-CC=icpc
+CC=CC
 CC_FLAGS=-mmic -openmp -Wno-unknown-pragmas
 SOUCES=saxpy_test.cpp
 OBJECTS=saxpy_test.o
