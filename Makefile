@@ -1,5 +1,5 @@
-CC=CC
-CC_FLAGS=-O3 -mmic -openmp
+CC=icpc
+CC_FLAGS=-mmic -openmp 
 
 SOUCES=saxpy_test.cpp
 OBJECTS=saxpy_test.o
