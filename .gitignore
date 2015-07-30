@@ -1,4 +1,4 @@
 *~
 saxpy_test
 *.o*
-*.pbs
+core
